@@ -8,7 +8,7 @@ class User:
         self.id = id
         self.username = username
         self.password = password
-    
+
     @classmethod
     def find_by_username(cls, username):
         user_table_conns = UserTable()
@@ -44,7 +44,7 @@ class UserRegister(Resource):
                         type=str, 
                         required=True, 
                         help="This field shouldn't be left blank")
-    
+
     def post(self):
         data = self.parser.parse_args()
         is_user_already_exist = User.find_by_username(data['username'])

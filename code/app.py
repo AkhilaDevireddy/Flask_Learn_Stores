@@ -18,4 +18,4 @@ api.add_resource(Items, '/items')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
-    app.run(debug=True)  # important to mention debug=True
+    app.run(debug=True, port=5001)  # important to mention debug=True
